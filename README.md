@@ -49,6 +49,12 @@ yarn create next-app --example cms-contentful cms-contentful-app
 pnpm create next-app --example cms-contentful cms-contentful-app
 ```
 
+## Update to Next 13
+
+* Edit the next version in package.json to 13 eg `"next": "^13.0.0"`
+* run the codemod to update Link usage `npx @next/codemod new-link components` [7790bf57338f212bd4c25810c60e94a3796cc098](https://github.com/cesine/cms-contentful-app/commit/7790bf57338f212bd4c25810c60e94a3796cc098).
+* hardcode width and height on the avatar [1b55987abe112c9a25e5a0da2914e7b123182374](https://github.com/cesine/cms-contentful-app/commit/1b55987abe112c9a25e5a0da2914e7b123182374).
+
 ## Configuration
 
 ### Step 1. Create an account and a space on Contentful
