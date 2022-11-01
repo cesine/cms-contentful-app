@@ -4,7 +4,7 @@ import Intro from '../components/intro'
 import { getAllPostsForHome } from '../lib/api'
 import { CMS_NAME } from '../lib/constants'
 
-export default async function Index({ preview }) {
+export default async function Index({ params: {preview} }) {
   const allPosts = await getAllPostsForHome(preview) ?? [];
   // console.log('allPosts', JSON.stringify(allPosts, null, 2))
   const heroPost = allPosts[0] || {}
