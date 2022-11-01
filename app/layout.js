@@ -1,3 +1,5 @@
+import '../styles/index.css'
+
 import Alert from '../components/alert'
 import Footer from '../components/footer'
 import Meta from '../components/meta'
@@ -12,7 +14,7 @@ export default function Layout({ preview, children }) {
           <Header />
           <div className="min-h-screen">
             <Alert preview={preview} />
-            <main>{children}</main>
+            <main className="container mx-auto px-5">{children}</main>
           </div>
           <Footer />
         </body>
