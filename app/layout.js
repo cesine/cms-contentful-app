@@ -1,12 +1,18 @@
-// Root layout (app/layout.js)
-// - Applies to all routes
-export default function RootLayout({ children }) {
+import Alert from '../components/alert'
+import Footer from '../components/footer'
+import Meta from '../components/meta'
+import Header from '../components/header'
+
+export default function Layout({ preview, children }) {
   return (
-    <html>
-      <body>
-        This is the root
-        {children}
-      </body>
-    </html>
+    <>
+      <Meta />
+      <Header />
+      <div className="min-h-screen">
+        <Alert preview={preview} />
+        <main>{children}</main>
+      </div>
+      <Footer />
+    </>
   )
 }
