@@ -4,5 +4,22 @@ module.exports = {
     // loader: 'custom',
     domains: ['images.ctfassets.net']
   },
-  experimental:{appDir: true}
+  experimental: { appDir: true },
+  async headers() {
+    return [
+      {
+        source: '/posts/:path',
+        headers: [
+          {
+            key: 'cache-control',
+            value: 'max-age=900',
+          },
+          {
+            key: 'x-another-custom-header',
+            value: 'my other custom header value',
+          },
+        ],
+      },
+    ]
+  },
 }
