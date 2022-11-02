@@ -6,6 +6,7 @@ import Meta from '../components/meta'
 import Header from '../components/header'
 
 export default function Layout({ preview, children }) {
+  // TODO how to set cache-control headers
   return (
     <html>
       <Meta />
